@@ -4,3 +4,4 @@ node_modules/
 .env
 notes.txt
 config/config.json
+seeders/record-seed.js

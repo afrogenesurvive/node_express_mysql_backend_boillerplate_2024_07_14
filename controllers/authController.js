@@ -4,7 +4,8 @@ const db = require("../models");
 
 const login = async (req, res) => {
   try {
-    res.status(200).send({ auth: "testing" });
+    const users = await db.User.findAll();
+    res.status(200).send({ result: users });
 
     // const user = await db.User.findOne({ where: { email: req.body.email } });
     // if (!user) {

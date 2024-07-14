@@ -4,7 +4,7 @@ const { v4: uuidv4 } = require("uuid"); // Ensure you have uuid installed in you
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert(
-      "Users",
+      "User",
       [
         {
           id: uuidv4(), // Generate a new UUID for the record
@@ -32,6 +32,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete("Users", null, {});
+    return queryInterface.bulkDelete("User", null, {});
   },
 };
